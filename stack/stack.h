@@ -1,3 +1,4 @@
+//stack.h
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
 
@@ -5,9 +6,17 @@
 
 /**@brief Struktur des Stacks.
  */
+typedef struct StackStruct {
+	 /* hier sollte noch etwas dazu kommen */
+	int data; //wert der gepusht wird
+	struct StackStruct *next; //pointer zum darunter liegenden Element
+} StackStruct;
+
 typedef struct {
-    /* hier sollte noch etwas dazu kommen */
-} IntStack;
+	StackStruct *top;
+    long count; //zählt wie viele Elemente im stack sind
+}IntStack;
+
 
 /* *** öffentliche Schnittstelle ******************************************** */
 
