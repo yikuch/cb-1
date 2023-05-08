@@ -63,7 +63,7 @@ int stackTop(const IntStack *self){
 
 // pop
 int stackPop(IntStack *self){
-
+printf("called stackpop\n");
 	if(self->count > 0){
 		StackStruct *temp = self->top;
 		int data = self->top->data;
@@ -90,6 +90,7 @@ int stackIsEmpty(const IntStack *self){
 
 // Ausgeben
 void stackPrint(const IntStack *self){
+	printf("called stackprint\n");
 
 	if(self->count < 1){
 		fprintf(stderr,"stackPrint nicht möglich. Der Stack ist leer\n");
@@ -98,7 +99,7 @@ void stackPrint(const IntStack *self){
 	long i = self->count;
 	StackStruct *temp = self->top;
 	while(i > 0){
-		printf("wert: %d	stnr: %d\n",temp->data,i--);
+		printf("wert: %d	stacknr: %d\n",temp->data,i--);
 		temp = (StackStruct *) temp->next;
 	}
 }
